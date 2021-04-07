@@ -1,3 +1,10 @@
+import React, { Component } from 'react'
+import getQuestions from '../../api/quiz'
+
+class Quiz extends Component {
+  
+}
+
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
@@ -9,33 +16,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-  {
-    question: "Who is the Best team in Baseball",
-    choice1: "Baltimore Orioles",
-    choice2: "New York Yankees",
-    choice3: "Boston Redsox",
-    choice4: "Tampa Bay Rays",
-    answer: 1
-  },
-  {
-    question:
-      "What is the correct syntax for referring to an external script called 'xxx.js'?",
-    choice1: "<script href='xxx.js'>",
-    choice2: "<script name='xxx.js'>",
-    choice3: "<script src='xxx.js'>",
-    choice4: "<script file='xxx.js'>",
-    answer: 3
-  },
-  {
-    question: " Who is the fairest of them all?",
-    choice1: "Conner",
-    choice2: "Chirs",
-    choice3: "Henry",
-    choice4: "test",
-    answer: 4
-  }
-];
+
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
