@@ -1,11 +1,14 @@
 import axios from 'axios'
+import apiUrl from '../apiConfig'
+import os from '../../.env'
+
 
 export const getQuestions = () => {
   return axios({
-    url: 'https://quizapi.io/api/v1/questions',
+    url: apiUrl,
     method: 'GET',
     headers: {
-      'X-Api-Key': 'nGH80GscdalNLushkTrHMva7nw8l2kKXp9jv0mxr'
+      'X-Api-Key': os.getenv('apiKey')
     }
   })
 }
